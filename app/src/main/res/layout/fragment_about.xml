@@ -9,6 +9,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="THIS IS THE ABOUT FRAGMENT" />
+        android:text="THIS IS THE ABOUT FRAGMENT - ISIDOROS" />
 
 </FrameLayout>

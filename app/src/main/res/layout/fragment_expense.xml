@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:context=".ui.home.ExpenseFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New expense form" />
+
+        <EditText
+            android:id="@+id/expense_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type expense date"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/expense_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Type the description"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/expense_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="0.00€"
+            android:inputType="numberDecimal" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/personal_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal" />
+
+            <RadioButton
+                android:id="@+id/supermarket_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supermarket" />
+
+            <RadioButton
+                android:id="@+id/gas_radiobutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gas" />
+
+            <RadioButton
+            android:id="@+id/common_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Common" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:padding="20dp"
+            android:text="SAVE" />
+
+    </LinearLayout>
+
+</ScrollView>

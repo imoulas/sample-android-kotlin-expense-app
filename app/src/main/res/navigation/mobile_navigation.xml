@@ -25,11 +25,6 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.myapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.myapplication.ui.home.AboutFragment"
         android:label="fragment_about"
@@ -39,4 +34,10 @@
         android:name="com.example.myapplication.ui.home.ExpenseFragment"
         android:label="fragment_expense"
         tools:layout="@layout/fragment_expense" />
+    <fragment
+        android:id="@+id/navigation_contact"
+        android:name="com.example.myapplication.ui.home.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+
 </navigation>

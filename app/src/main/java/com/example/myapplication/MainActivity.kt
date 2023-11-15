@@ -1,6 +1,10 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -12,10 +16,32 @@ import com.example.myapplication.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var incomeEditText:EditText
+    private lateinit var submitIncomeButton:Button
 
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+        incomeEditText = findViewById(R.id.incomeEditText)
+        submitIncomeButton = findViewById(R.id.submitIncomeButton)
+        submitIncomeButton.setOnClickListener {
+            recordIncome()
+        }
+
+    fun recordIncome() {
+        val incomeText = incomeEditText.text.toString()
+        if (incomeText.isNotEmpty()) {
+            val incomeAmount = incomeText.toDouble()
+            Toast.makeText(this, "Income recorded: $incomeAmount", Toast.LENGTH_SHORT).show()
+            incomeEditText.text.clear()
+        } else{
+                Toast.makeText(this,"Please enter a valid income amount ",Toast.LENGTH_SHORT).show()
+            }
+
+    }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -31,5 +57,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    private fun recordIncome() {
+        TODO("Not yet implemented")
     }
 }

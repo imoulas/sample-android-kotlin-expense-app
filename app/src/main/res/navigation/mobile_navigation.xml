@@ -38,6 +38,15 @@
         android:id="@+id/navigation_contact"
         android:name="com.example.myapplication.ui.home.ContactFragment"
         android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" />
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_navigation_contact_to_addContactFragment2"
+            app:destination="@id/addContactFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment2"
+        android:name="com.example.myapplication.ui.home.AddContactFragment"
+        android:label="AddContactFragment"
+        tools:layout="@layout/fragment_add_contact"/>
 
 </navigation>
